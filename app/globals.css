@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1620; /* deeper than midnight for page bg */
+  --fg: #e6eef6;
+  --muted: #9fb2c7;
+  --accent: #00BFA6;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(0,191,166,0.08), transparent 60%),
+              radial-gradient(900px 700px at -10% 20%, rgba(0,191,166,0.06), transparent 60%),
+              var(--bg);
+  color: var(--fg);
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-tealAccent px-5 py-2.5 font-semibold text-midnight shadow-card transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tealAccent/60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-md border border-tealAccent/60 px-5 py-2.5 font-semibold text-tealAccent hover:bg-tealAccent/10 transition;
+}
+
+.card {
+  @apply rounded-xl border border-white/5 bg-white/5 backdrop-blur shadow-card;
+}
+
+.section-title {
+  @apply text-2xl sm:text-3xl font-bold tracking-tight;
+}
